@@ -2,17 +2,15 @@ package ds.a.stack;
 
 public class Stack {
 	int topItem;
-	int maxSize;
 	int[] list;
 	
 	public Stack(int maxSize) {
-		this.maxSize = maxSize;
 		list = new int[maxSize];
 		topItem = -1;
 	}
 	
 	public void push(int data) {
-		if (topItem == maxSize-1) {
+		if (topItem == list.length-1) {
 			System.out.println("Cannot insert new item as stack is full.");
 			return;
 		}
